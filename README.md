@@ -108,3 +108,10 @@ STEP9: CSS setup
 		-> import our CSS in app.js
 
 		-> update webpack config to use css-loader for CSS files
+
+STEP10: file-loader setup - handles files - images, SVGs, fonts, videos or anything else you need.
+
+		->create /src/assets/ folder
+		-> npm install --save-dev file-loader
+		-> import and use image in app.js
+		->update webpack config 
