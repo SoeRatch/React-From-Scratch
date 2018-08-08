@@ -32,4 +32,22 @@ module.exports = {
  	// devServer: {
     //	contentBase: paths.SRC,
 	//	  },
+
+  // Loaders configuration -> ADDED in 4th time
+  // We are telling webpack to use "babel-loader" for .js and .jsx files
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+        ],
+      },
+    ],
+  },
+  // resolve file extenion -> ADDED in 4th time
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };

@@ -68,3 +68,18 @@ STEP6: HTML Webpack Plugin -simplifies creation of HTML files to serve your webp
 		->activate it in webpack.config.js. 
 			Require it and add it to the plugins section of the config
 		->restart dev task, we’ll be able to see Hello world! in the console.
+
+STEP7: Babel setup -Babel takes modern JavaScript and transpiles it - converts it to the old version of 
+					JavaScript that can be executed in the browsers that don’t support modern JavaScript
+				    standards.
+
+				    -> npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react
+				    		install the above four packages
+
+				    -> create .babelrc file  // Babel has this default config file
+				    	{
+						  "presets": ["env", "react"]
+						}
+					-> This will tell Babel to use two presets we just installed.
+					
+					-> update webpack.config.js to use Babel loader for .js and .jsx files.
