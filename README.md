@@ -53,3 +53,10 @@ STEP 3: Setting up webpack dev server - To be able to open our application in a 
 			  }
 		-> npm run dev
 		-> http://localhost:8080. Now it will just list our project’s files.
+
+STEP4: create an index.html in the src folder
+STEP5: update webpack.config.js
+
+
+Every time we change webpack config we need to restart webpack (or webpack dev server).
+Restart npm run dev and visit http://localhost:8080, it will just show a blank page. No signs of our JavaScript. To automatically inject <script> tags with our bundled application we’ll use html-webpack-plugin.
