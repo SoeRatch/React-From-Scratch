@@ -42,3 +42,14 @@ STEP2:  Setting up webpack- transpiles and bundles JavaScript files, compile SAS
 
 		-> npm run build
 			Npm tasks allow us not to type full path to the package binary every time.It searches for locally installed packages in the project’s node_modules folder.
+
+STEP 3: Setting up webpack dev server - To be able to open our application in a browser, we’ll need a server. Webpack already provides us with a dev server.
+		-> npm install --save-dev webpack-dev-server
+			 It will server our files during development and also it can enable us to use hot module reload.
+		-> in package.json add
+			 "scripts": {
+			    "dev": "webpack-dev-server",
+			    "build": "webpack"
+			  }
+		-> npm run dev
+		-> http://localhost:8080. Now it will just list our project’s files.

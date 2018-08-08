@@ -2,9 +2,11 @@
   "name": "React-From-Scratch",
   "devDependencies": {
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
   },
   "scripts": {
+  	"dev": "webpack-dev-server",
     "build": "webpack"
   }
 }
