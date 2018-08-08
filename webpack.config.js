@@ -2,6 +2,9 @@
 // https://nodejs.org/api/path.html
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // Import our plugin -> ADDED 3rd time
+
+
 // Constant with our paths
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
@@ -16,9 +19,17 @@ module.exports = {
     path: paths.DIST,
     filename: 'app.bundle.js'
   },
+  // Tell webpack to use html plugin -> ADDED in 3rd time
+  // index.html is used as a template in which it'll inject bundled app.
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(paths.SRC, 'index.html'),
+    }),
+  ],
+  	//Dev server configuration -> REMOVED in 3rd time
    // Dev server configuration -> ADDED in 2nd time
   // Now it uses our "src" folder as a starting point
-  devServer: {
-    contentBase: paths.SRC,
-  },
+ 	// devServer: {
+    //	contentBase: paths.SRC,
+	//	  },
 };

@@ -60,3 +60,9 @@ STEP5: update webpack.config.js
 
 Every time we change webpack config we need to restart webpack (or webpack dev server).
 Restart npm run dev and visit http://localhost:8080, it will just show a blank page. No signs of our JavaScript. To automatically inject <script> tags with our bundled application we’ll use html-webpack-plugin.
+
+STEP6: HTML Webpack Plugin -simplifies creation of HTML files to serve your webpack bundles.
+		->npm install --save-dev html-webpack-plugin
+		->activate it in webpack.config.js. 
+			Require it and add it to the plugins section of the config
+		->restart dev task, we’ll be able to see Hello world! in the console.
