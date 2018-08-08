@@ -85,7 +85,26 @@ STEP7: Babel setup -Babel takes modern JavaScript and transpiles it - converts i
 					-> update webpack.config.js to use Babel loader for .js and .jsx files.
 
 STEP8: REACT setup
+
 		->npm install --save react react-dom
 		-> modify index.html
 			<div id="app"></div>
 		->modify app.js with react component
+
+STEP9: CSS setup
+
+		->Create src/css folder and a simple style.css in it.
+
+		->npm install --save-dev css-loader
+				To add this CSS file to the app, let's use css-loader.
+				CSS loader needs to write loaded CSS code to either style tag in the head or external stylesheet file. If you want to write it to the style tag you should use style-loader.
+
+		->npm install --save-dev extract-text-webpack-plugin
+			let's extract it to the external file by using extract-text-webpack-plugin. HTML webpack plugin, that we already set, will add css file to index.html for us.
+
+		NOTE: if you are using webpack v4.x you’ll need to install extract-text-webpack-plugin@next which is 
+				webpack 4 compatible.
+
+		-> import our CSS in app.js
+
+		-> update webpack config to use css-loader for CSS files

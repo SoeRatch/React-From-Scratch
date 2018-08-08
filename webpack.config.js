@@ -4,6 +4,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Import our plugin -> ADDED 3rd time
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin'); //  -> ADDED 5th time
 
 // Constant with our paths
 const paths = {
@@ -25,6 +26,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(paths.SRC, 'index.html'),
     }),
+    // CSS will be extracted to this bundle file -> ADDED in 5th time
+    new ExtractTextPlugin('style.bundle.css'), 
   ],
   	//Dev server configuration -> REMOVED in 3rd time
    // Dev server configuration -> ADDED in 2nd time
@@ -44,6 +47,15 @@ module.exports = {
           'babel-loader',
         ],
       },
+       // CSS loader to CSS files -> ADDED in 5th time
+      // Files will get handled by css loader and then passed to the extract text plugin
+      // which will write it to the file we defined above
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          use: 'css-loader',
+        }),
+      }
     ],
   },
   // resolve file extenion -> ADDED in 4th time
