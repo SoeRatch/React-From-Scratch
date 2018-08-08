@@ -13,5 +13,9 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   }
 }

@@ -81,5 +81,11 @@ STEP7: Babel setup -Babel takes modern JavaScript and transpiles it - converts i
 						  "presets": ["env", "react"]
 						}
 					-> This will tell Babel to use two presets we just installed.
-					
+
 					-> update webpack.config.js to use Babel loader for .js and .jsx files.
+
+STEP8: REACT setup
+		->npm install --save react react-dom
+		-> modify index.html
+			<div id="app"></div>
+		->modify app.js with react component
